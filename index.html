@@ -1,1 +1,62 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bitki Bazlı Tarifler</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay">
+      <h1>Bitki Bazlı Tarifler</h1>
+      <p>Vegan & Vejetaryen lezzetler • Kalorileriyle birlikte 🌿</p>
+    </div>
+  </header>
 
+  <main class="container">
+    <section class="controls card">
+      <input id="search" class="search" placeholder="Tarif ara (ör. kinoa, mercimek...)" />
+      <select id="filter">
+        <option value="all">Tümü</option>
+        <option value="vegan">Vegan</option>
+        <option value="vege">Vejetaryen</option>
+      </select>
+      <select id="sort">
+        <option value="new">En yeni</option>
+        <option value="cal-asc">Kalori (Artan)</option>
+        <option value="cal-desc">Kalori (Azalan)</option>
+      </select>
+    </section>
+
+    <section class="card" id="listCard">
+      <h2>Tarifler</h2>
+      <div id="recipes" class="grid"></div>
+      <div id="empty" class="small" style="display:none;">
+        Henüz tarif yok. Yeni eklemeler yakında 🍽️
+      </div>
+    </section>
+  </main>
+
+  <!-- Tarif Detay Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <img id="modalImg" src="" alt="" />
+      <h2 id="modalTitle"></h2>
+      <p id="modalType"></p>
+      <p id="modalCalories"></p>
+      <h3>Malzemeler</h3>
+      <ul id="modalIngredients"></ul>
+      <h3>Hazırlanışı</h3>
+      <p id="modalSteps"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Bitki Bazlı Tarifler • Sağlıklı yaşam sizinle 🍃</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
